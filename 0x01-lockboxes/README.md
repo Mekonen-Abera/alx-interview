@@ -34,6 +34,7 @@ Here’s a list of concepts and resources that will be instrumental in tackling 
 
 * Understanding how to use sets for keeping track of visited boxes and available keys can optimize the search process.
 * [Python Sets (Python Official Documentation)](https://intranet.alxswe.com/rltoken/zkmtaPqAbKyxx41kRw7ulA)
+
 By reviewing these concepts and utilizing these resources, you will be well-equipped to develop an efficient solution for this project, applying both your algorithmic thinking and Python programming skills.
 
 ## Additional Resources
