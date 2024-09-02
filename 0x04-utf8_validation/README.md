@@ -50,6 +50,6 @@ Write a method that determines if a given data set represents a valid UTF-8 enco
 * The data will be represented by a list of integers
 * Each integer represents 1 byte of data, therefore you only need to handle the 8 least significant bits of each integer
 
-[0-validate_utf8.py] | (0-validate_utf8.py)
+[0-validate_utf8.py](0-validate_utf8.py)
 
 ## Done by: Mekonen Abera
