@@ -1,30 +1,35 @@
 #!/usr/bin/python3
-"""UTF-8 Encoding Validation"""
+'''Validating UTF-8 Format'''
 
-def count_leading_ones(num):
-    """Returns the number of leading 1 bits in the binary representation."""
-    leading_ones = 0
-    mask = 1 << 7  # Start with the highest bit
-    while mask & num:
-        leading_ones += 1
-        mask >>= 1  # Shift mask right to check the next bit
-    return leading_ones
 
-def is_valid_utf8(data):
-    """Checks if the given data set represents valid UTF-8 encoding."""
-    bytes_remaining = 0  # Number of bytes expected for the current character
-    for byte in data:
-        if bytes_remaining == 0:
-            bytes_remaining = count_leading_ones(byte)
-            # Check for valid UTF-8 byte formats
-            if bytes_remaining == 0:
-                continue  # 1-byte character (0xxxxxxx)
-            if bytes_remaining == 1 or bytes_remaining > 4:
-                return False  # Invalid byte count
-        else:
-            # Ensure the byte follows the 10xxxxxx format
-            if not (byte & (1 << 7) and not (byte & (1 << 6))):
+def validUTF8(data):
+    '''checks if the data represents a valid utf format'''
+    bytes_list = [format(el, '08b')[-8:] for el in data]
+    idx = 0
+    while idx < len(bytes_list):
+        n0_bytes = count_leading_ones(bytes_list[idx])
+        if n0_bytes > 0:
+            if n0_bytes == 1 or n0_bytes > 4:
                 return False
-        bytes_remaining -= 1  # Decrease the count of remaining bytes
-    return bytes_remaining == 0  # Ensure all bytes are accounted for
+            start = idx + 1
+            end = idx + n0_bytes
+            for i in range(start, end):
+                if i >= len(bytes_list) or not bytes_list[i].startswith('10'):
+                    return False
+                idx += 1
+        idx += 1
 
+    return True
+
+
+def count_leading_ones(byt: str):
+    '''counts the number of "1" digits at the start of the string'''
+    count = 0
+
+    for bit in byt:
+        if bit == '1':
+            count += 1
+        else:
+            break
+
+    return count
