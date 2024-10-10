@@ -21,17 +21,13 @@
 
 ## Resources:
 * Python Official Documentation:
-
-      * [Nested Lists](https://intranet.alxswe.com/rltoken/8SPalOgoGDWQChVbct0p1g): Understanding how to work with lists within lists in Python.
+    * [Nested Lists](https://intranet.alxswe.com/rltoken/8SPalOgoGDWQChVbct0p1g): Understanding how to work with lists within lists in Python.
 * GeeksforGeeks Articles:
-
-      * [Python Multi-dimensional Arrays](https://intranet.alxswe.com/rltoken/IYcYmeVlCfF-F7Szn1fzfQ): A guide to working with 2D arrays in Python effectively.
+    * [Python Multi-dimensional Arrays](https://intranet.alxswe.com/rltoken/IYcYmeVlCfF-F7Szn1fzfQ): A guide to working with 2D arrays in Python effectively.
 * TutorialsPoint:
-
-      * [Python Lists](https://intranet.alxswe.com/rltoken/TZ8UtQaRxN5cFf8c1TB-rw): Explains how to create, access, and manipulate lists in Python, which is essential for working with a grid.
+    * [Python Lists](https://intranet.alxswe.com/rltoken/TZ8UtQaRxN5cFf8c1TB-rw): Explains how to create, access, and manipulate lists in Python, which is essential for working with a grid.
 * YouTube Tutorials:
-
-      * [Python 2D arrays and lists](https://intranet.alxswe.com/rltoken/H7SwlI_XYDpwYonNYKXQfg)
+    * [Python 2D arrays and lists](https://intranet.alxswe.com/rltoken/H7SwlI_XYDpwYonNYKXQfg)
 
 By understanding these concepts and utilizing the provided resources, you will be equipped to approach the problem methodically. You’ll need to iterate over the grid, apply logical operations to identify the perimeter of the island, and account for the specific conditions described in the task. This project not only tests your algorithmic thinking but also reinforces your ability to manipulate data structures and apply logical reasoning to solve problems.
 
@@ -57,11 +53,11 @@ By understanding these concepts and utilizing the provided resources, you will b
 Create a function def island_perimeter(grid): that returns the perimeter of the island described in grid:
 
 * grid is a list of list of integers:
-      * 0 represents water
-      * 1 represents land
-      * Each cell is square, with a side length of 1
-      * Cells are connected horizontally/vertically (not diagonally).
-      * grid is rectangular, with its width and height not exceeding 100
+    * 0 represents water
+    * 1 represents land    
+    * Each cell is square, with a side length of 1
+    * Cells are connected horizontally/vertically (not diagonally).
+    * grid is rectangular, with its width and height not exceeding 100
 * The grid is completely surrounded by water
 * There is only one island (or nothing).
 * The island doesn’t have “lakes” (water inside that isn’t connected to the water surrounding the island).
